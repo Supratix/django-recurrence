@@ -215,7 +215,7 @@ recurrence.Rule.prototype = {
             parts.push(
                 interpolate(
                     recurrence.display.tokens.until,
-                    {'date': recurrence.date.format(this.until, pgettext('Until date format', '%Y-%m-%d'))}, true));
+                    {'date': recurrence.date.format(this.until, gettext('Until date format', '%Y-%m-%d'))}, true));
         }
 
         return parts.join(', ');
@@ -1035,13 +1035,13 @@ recurrence.display.weekdays_short = [
     gettext('Fri'), gettext('Sat'), gettext('Sun')
 ];
 recurrence.display.weekdays_oneletter = [
-    pgettext('Monday first letter', 'M'),
-    pgettext('Tuesday first letter', 'T'),
-    pgettext('Wednesday first letter', 'W'),
-    pgettext('Thursday first letter', 'T'),
-    pgettext('Friday first letter', 'F'),
-    pgettext('Saturday first letter', 'S'),
-    pgettext('Sunday first letter', 'S')
+    gettext('Monday first letter', 'M'),
+    gettext('Tuesday first letter', 'T'),
+    gettext('Wednesday first letter', 'W'),
+    gettext('Thursday first letter', 'T'),
+    gettext('Friday first letter', 'F'),
+    gettext('Saturday first letter', 'S'),
+    gettext('Sunday first letter', 'S')
 ];
 recurrence.display.weekdays_position = {
     '1': gettext('first %(weekday)s'),
@@ -1075,19 +1075,19 @@ recurrence.display.last_of_month_short = {
 }
 recurrence.display.months = [
     gettext('January'), gettext('February'), gettext('March'),
-    gettext('April'), pgettext('month name', 'May'), gettext('June'),
+    gettext('April'), gettext('month name', 'May'), gettext('June'),
     gettext('July'), gettext('August'), gettext('September'),
     gettext('October'), gettext('November'), gettext('December')
 ];
 recurrence.display.months_short = [
     gettext('Jan'), gettext('Feb'), gettext('Mar'),
-    gettext('Apr'), pgettext('month name', 'May'), gettext('Jun'),
+    gettext('Apr'), gettext('month name', 'May'), gettext('Jun'),
     gettext('Jul'), gettext('Aug'), gettext('Sep'),
     gettext('Oct'), gettext('Nov'), gettext('Dec')
 ];
 recurrence.display.months_ap = [
     gettext('Jan.'), gettext('Feb.'), gettext('March'),
-    gettext('April'), pgettext('month name', 'May'), gettext('June'),
+    gettext('April'), gettext('month name', 'May'), gettext('June'),
     gettext('July'), gettext('Aug.'), gettext('Sept.'),
     gettext('Oct.'), gettext('Nov.'), gettext('Dec.')
 ];
@@ -1095,7 +1095,7 @@ recurrence.display.ampm = {
     'am': gettext('a.m.'), 'pm': gettext('p.m.'),
     'AM': gettext('AM'), 'PM': gettext('PM')
 };
-recurrence.display.month_day = pgettext('Day of month', '%j%S');
+recurrence.display.month_day = gettext('Day of month', '%j%S');
 
 recurrence.display.ordinal_indicator = {
     'en': function(day) {
